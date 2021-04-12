@@ -1,0 +1,34 @@
+name: 'MQTT Publish Action'
+description: 'This action publishes a MQTT message from GitHub Actions.'
+author: 'Joachim Uhrlaß'
+inputs:
+  protocol:
+    description: "MQTT server protocol. One of: 'wss' | 'ws' | 'mqtt' | 'mqtts' | 'tcp' | 'ssl' | 'wx' | 'wxs'"
+    default: 'mqtt'
+    required: true
+  host:
+    description: 'MQTT server host'
+    default: 'localhost'
+    required: true
+  port:
+    description: 'MQTT server port'
+    default: 1883
+    required: true
+  topic:
+    description: 'MQTT topic'
+    required: true
+  username:
+    description: 'MQTT username'
+    required: false
+  password:
+    description: 'MQTT password'
+    required: false
+  message:
+    description: 'Message to send'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'cast'
+  color: 'gray-dark'
