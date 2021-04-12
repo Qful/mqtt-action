@@ -8,7 +8,7 @@ For example:
 
 ```yaml
 - name: Publish commit hash to mqtt broker
-  uses: juhrlass/mqtt-action@master
+  uses: stopstopstop/mqtt-action@master
   with:
     protocol: mqtt
     host: broker.example.com
@@ -18,4 +18,3 @@ For example:
     username: 'mqtt'
     password: ${{ secrets.MQTT_BROKER_PASSWORD }}
 ```
-
